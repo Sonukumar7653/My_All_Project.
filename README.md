@@ -1,1 +1,1 @@
-# My-Resume-project.
+# My-Resume.
