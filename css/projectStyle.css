@@ -1,0 +1,69 @@
+/* to vertically slide the image end */
+
+.ourProject {
+    display: flex;
+    margin: 0 45px;
+    column-gap: 30px;
+}
+
+.bImage {
+
+    flex-grow: 1;
+    cursor: pointer;
+    height: 450px;
+    transition: ease-in-out 8s;
+    background-position: bottom;
+    margin: 10px;
+    border-radius: 20px;
+    border-top: 2px double black;
+    box-shadow: -15px 17px 5px -3px rgba(25, 245, 13, 0.34);
+    -webkit-box-shadow: -15px 17px 5px -3px rgba(25, 245, 13, 0.34);
+    -moz-box-shadow: -15px 17px 5px -3px rgba(25, 245, 13, 0.34);
+}
+
+
+.ourProject .bi1 {
+
+    background: url(../images/image3.png);
+    background-size: cover;
+    /* background-repeat: no-repeat; */
+
+}
+
+
+.ourProject .bi2 {
+
+    background: url(../images/image3.png);
+    background-size: cover;
+    /* background-repeat: no-repeat; */
+
+}
+
+.ourProject .bi3 {
+
+    background: url(../images/image3.png);
+    background-size: cover;
+    /* background-repeat: no-repeat; */
+
+}
+
+
+.bImage:hover {
+    background-position: bottom;
+
+}
+
+
+@media screen and (max-width:576px) {
+
+    .ourProject {
+        display: flex;
+        flex-direction: column;
+        margin: 0 5px;
+        row-gap: 40px;
+
+
+    }
+
+
+}
