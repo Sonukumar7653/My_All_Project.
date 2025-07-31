@@ -1,0 +1,21 @@
+.navbar-light .navbar-nav  .nav-item .nav-link.active, .navbar-light .navbar-nav .show>.nav-link {
+    color: yellow !important;
+}
+
+
+/* background image styling  */
+
+.bg-cover {
+      background-image: url('img/mountain.jpg');
+      background-size: cover;
+      background-position:top;
+      height: 80vh;
+    }
+
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.5); /* Optional: darkens background */
+      height: 100%;
+      width: 100%;
+    }
+
+   
