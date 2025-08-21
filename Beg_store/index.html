@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bag Store</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- Header Section  -->
+  <header class="site-header">
+    <div class="logo">👜Sharma BB Store</div>
+
+    <div class="search-bar">
+      <input type="text" id="searchInput" placeholder="Search bags or bottles..." onkeyup="filterProducts()">
+
+      <button class="search-btn" type="submit"><i class="bi bi-search"></i></button>
+    </div>
+
+    <div class="cart mb-2">
+      <button id="cart-btn">🛒 Cart (<span id="cart-count">0</span>)</button>
+    </div>
+  </header>
+
+   <!-- Carousel Section  -->
+
+   <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active" data-bs-interval="10000">
+      <img src="image/shopping-sales.jpg" class="img-fluid d-block w-100" alt="Bag 1">
+      <div class="carousel-caption d-none d-md-block">
+        <h3>First slide label</h3>
+        <p>Some representative placeholder content for the first slide.</p>
+      </div>
+    </div>
+    <div class="carousel-item" data-bs-interval="2000">
+      <img src="image/couple-winter-bag.jpg" class=" img-fluid d-block w-100" alt="Bag 2">
+      <div class="carousel-caption d-none d-md-block  text-light">
+        <h3>Second slide label</h3>
+        <p>Some representative placeholder content for the second slide.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="image/shopping-sales.jpg" class="img-fluid d-block w-100" alt="Bag 3">
+      <div class="carousel-caption d-none d-md-block">
+        <h3>Third slide label</h3>
+        <p>Some representative placeholder content for the third slide.</p>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+   
+
+  <main class="product-container bg-secondary">
+    <div class="product">
+      <img src="image/leather_bag.webp" alt="Bag 1">
+      <h3>Classic Leather Bag</h3>
+      <p>₹1200</p>
+      <button onclick="addToCart('Classic Leather Bag', 1200,'image/leather_bag.webp')">Add to Cart</button>
+    </div>
+
+    <div class="product">
+      <img src="image/Backpack_bag.webp" alt="Bag 2">
+      <h3>Canvas Backpack</h3>
+      <p>₹950</p>
+      <button onclick="addToCart('Canvas Backpack', 950,'image/Backpack_bag.webp')">Add to Cart</button>
+    </div>
+
+    <div class="product">
+      <img src="image/Style_bag.jpg" alt="Bag 3">
+      <h3>Stylish Tote Bag</h3>
+      <p>₹1100</p>
+      <button onclick="addToCart('Stylish Tote Bag', 1100,'image/Style_bag.jpg')">Add to Cart</button>
+    </div>
+
+    <div class="product">
+      <img src="image/Hand_bag.jpeg" alt="Bag 4">
+      <h3>Handcrafted Jute Bag</h3>
+      <p>₹800</p>
+      <button onclick="addToCart('Handcrafted Jute Bag', 800,'image/Hand_bag.jpeg')">Add to Cart</button>
+    </div>
+
+    <div class="product">
+      <img src="image/Designer_bag.webp" alt="Bag 5">
+      <h3>Mini Sling Bag</h3>
+      <p>₹700</p>
+      <button onclick="addToCart('Mini Sling Bag', 700,'image/Designer_bag.webp')">Add to Cart</button>
+    </div>
+
+    <div class="product">
+      <img src="image/Travel_bag.jpg" alt="Bag 6">
+      <h3>Travel Duffel Bag</h3>
+      <p>₹1400</p>
+      <button onclick="addToCart('Travel Duffel Bag', 1400,'image/Travel_bag.jpg')">Add to Cart</button>
+    </div>
+
+    <div class="product">
+      <img src="image/Vintage_bag.webp" alt="Bag 7">
+      <h3>Vintage Satchel</h3>
+      <p>₹1600</p>
+      <button onclick="addToCart('Vintage Satchel', 1600,'image/Vintage_bag.webp')">Add to Cart</button>
+    </div>
+
+    <div class="product">
+      <img src="image/Women_bag.jpg" alt="Bag 8">
+      <h3>Designer Shoulder Bag</h3>
+      <p>₹1800</p>
+      <button onclick="addToCart('Designer Shoulder Bag', 1800,'image/Women_bag.jpg')">Add to Cart</button>
+    </div>
+
+    <div class="product">
+      <img src="image/Ec0_bag.jpg" alt="Bag 9">
+      <h3>Eco-Friendly Bag</h3>
+      <p>₹650</p>
+      <button onclick="addToCart('Eco-Friendly Bag', 650,'image/Ec0_bag.jpg')">Add to Cart</button>
+    </div>
+
+    <div class="product">
+      <img src="image/Laptop_bag.webp" alt="Bag 10">
+      <h3>Executive Laptop Bag</h3>
+      <p>₹2000</p>
+      <button onclick="addToCart('Executive Laptop Bag', 2000,'image/Laptop_bag.webp')">Add to Cart</button>
+    </div>
+
+    <div class="product">
+      <img src="image/Designer_bag.webp" alt="Bag 11">
+      <h3>Women's Clutch</h3>
+      <p>₹500</p>
+      <button onclick="addToCart('Women\'s Clutch', 500,'image/Designer_bag.webp')">Add to Cart</button>
+    </div>
+
+    <div class="product">
+      <img src="image/Luxury_bag.jpg" alt="Bag 12">
+      <h3>Luxury Handbag</h3>
+      <p>₹2500</p>
+      <button onclick="addToCart('Luxury Handbag', 2500,'image/Luxury_bag.jpg')">Add to Cart</button>
+    </div>
+
+    <div class="product">
+      <img src="image/Bottle1.jpeg" alt="Bottle 1">
+      <h3>Stainless Steel Bottle</h3>
+      <p>₹499</p>
+      <button onclick="addToCart('Stainless Steel Bottle', 499,'image/Bottle1.jpeg')">Add to Cart</button>
+    </div>
+
+    <div class="product">
+      <img src="image/Bottle4.jpeg" alt="Bottle 2">
+      <h3>Insulated Water Bottle</h3>
+      <p>₹699</p>
+      <button onclick="addToCart('Insulated Water Bottle', 699,'image/Bottle4.jpeg')">Add to Cart</button>
+    </div>
+
+    <div class="product">
+      <img src="image/Bottle5.jpeg" alt="Bottle 3">
+      <h3>Plastic Sports Bottle</h3>
+      <p>₹299</p>
+      <button onclick="addToCart('Plastic Sports Bottle', 299,'image/Bottle5.jpeg')">Add to Cart</button>
+    </div>
+
+    <div class="product">
+      <img src="image/Steal_bottle.jpeg" alt="Bottle 4">
+      <h3>Glass Bottle 750ml</h3>
+      <p>₹449</p>
+      <button onclick="addToCart('Glass Bottle 750ml', 449,'image/Steal_bottle.jpeg')">Add to Cart</button>
+    </div>
+
+    <div class="product">
+      <img src="image/Bottle6.jpeg" alt="Bottle 5">
+      <h3>Color Changing Bottle</h3>
+      <p>₹599</p>
+      <button onclick="addToCart('Color Changing Bottle', 599,'image/Bottle6.jpeg')">Add to Cart</button>
+    </div>
+
+    <div class="product">
+      <img src="image/Bottle7.jpeg" alt="Bottle 6">
+      <h3>Foldable Silicone Bottle</h3>
+      <p>₹379</p>
+      <button onclick="addToCart('Foldable Silicone Bottle', 379,'image/Bottle7.jpeg')">Add to Cart</button>
+    </div>
+
+    <div class="product">
+      <img src="image/Bottle4.jpeg" alt="Bottle 7">
+      <h3>Eco Bottle with Strap</h3>
+      <p>₹349</p>
+      <button onclick="addToCart('Eco Bottle with Strap', 349,'image/Bottle4.jpeg')">Add to Cart</button>
+    </div>
+
+    <div class="product">
+      <img src="image/Bottle1.jpeg" alt="Bottle 8">
+      <h3>Premium Copper Bottle</h3>
+      <p>₹799</p>
+      <button onclick="addToCart('Premium Copper Bottle', 799,'image/Bottle1.jpeg')">Add to Cart</button>
+    </div>
+
+  </main>
+
+  <!-- Footer Section  -->
+  <footer class="bg-primary text-light pt-4">
+    <div class="container">
+      <div class="row">
+
+        <!-- bags Links -->
+        <div class="col-md-4 mb-3">
+          <h5>Bags Categories</h5>
+          <ul class="list-unstyled">
+            <li><a href="#" class="text-decoration-none text-light">Leather ags</a></li>
+            <li><a href="#" class="text-decoration-none text-light">Women's Backpacks Bags</a></li>
+            <li><a href="#" class="text-decoration-none text-light">Laptop Bags</a></li>
+            <li><a href="#" class="text-decoration-none text-light">School Bags</a></li>
+            <li><a href="#" class="text-decoration-none text-light">Travel Bags</a></li>
+            <li><a href="#" class="text-decoration-none text-light">Steel Bottles</a></li>
+            <li><a href="#" class="text-decoration-none text-light">Sports Bottles</a></li>
+          </ul>
+        </div>
+
+
+
+
+        <!-- Contact Info -->
+        <div class="col-md-4 mb-3">
+          <h5>Contact Us</h5>
+          <p class="mb-1"><i class="bi bi-geo-alt-fill me-2"></i>Gurgaon Sectoer-5, Haryana, India</p>
+          <p class="mb-1"><i class="bi bi-telephone-fill me-2"></i>+91 9279963714</p>
+          <p><i class="bi bi-envelope-fill me-2"></i>sonukumar7653@gmail.com</p>
+        </div>
+
+        <!-- Shop Timings -->
+        <div class="col-md-4 mb-3">
+          <h5>Shop Timings</h5>
+          <ul class="list-unstyled">
+            <li><i class="bi bi-clock me-2"></i>Mon - Fri: 10:00 AM - 8:00 PM</li>
+            <li><i class="bi bi-clock me-2"></i>Saturday: 10:00 AM - 6:00 PM</li>
+            <li><i class="bi bi-clock me-2"></i>Sunday: Closed</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Copyright -->
+      <div class="text-center mt-3 border-top pt-3">
+        <p class="mb-0">&copy; Sharma BB Store. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+
+
+  <div id="cart-modal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeCart()">&times;</span>
+      <h2>Your Cart</h2>
+      <ul id="cart-items"></ul>
+      <p>Total: ₹<span id="cart-total">0</span></p>
+      <button id="paynow">Buy Now</button>
+
+
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
