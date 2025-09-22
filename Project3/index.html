@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Welcome to our services site offering pricing, blog, and contact options." />
+  <title>psd to web</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
+  <!-- Roboto Font from Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    .mobile-toggle-area {
+      display: none;
+    }
+
+    @media (max-width: 991.98px) {
+
+      .top-bar,
+      .navbar {
+        display: none !important;
+      }
+
+      .mobile-toggle-area {
+        display: flex !important;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 15px;
+        border-bottom: 1px solid #ccc;
+        background-color: #105a23 !important;
+
+      }
+
+      .mobile-menu {
+        display: none;
+        /* background-color: #f8f9fa; */
+        padding: 15px;
+
+      }
+
+      .mobile-menu.show {
+        display: block;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .responsive-heading {
+        font-size: 1.5rem !important;
+        /* Smaller size for sm and below */
+      }
+    }
+
+    .responsive-fs {
+      font-size: 1rem;
+      /* fs-6 size (for sm to md) */
+    }
+
+    @media (min-width: 768px) {
+      h2 {
+        font-size: 1.75rem !important;
+        /* Default h3 size on lg+ */
+      }
+    }
+
+
+    /* Default styles for md and above */
+    h1 {
+      font-size: 2.5rem !important;
+      /* h1 */
+    }
+
+    h2 {
+      font-size: 1.75rem !important;
+      /* h3 */
+    }
+
+    p {
+      font-size: 1rem !important;
+    }
+
+    button {
+      font-size: 1rem !important;
+      padding: 0.5rem 1rem !important;
+    }
+
+    /* Responsive tweaks for sm and below */
+    @media (max-width: 767.98px) {
+      h1 {
+        font-size: 1.75rem !important;
+      }
+
+      h2 {
+        font-size: 1.25rem !important;
+      }
+
+      p {
+        font-size: 0.9rem !important;
+      }
+
+      button {
+        font-size: 0.875rem !important;
+        padding: 0.4rem 0.75rem !important;
+      }
+
+      .food-section {
+        padding: 1rem;
+      }
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <!-- Top Header in desktop -->
+  <div class="top-bar d-flex flex-column flex-md-row justify-content-between align-items-center">
+    <div class="d-flex align-items-center mb-2 mb-md-0">
+      <input type="text" class="form-control me-2" placeholder="Search here" aria-label="Search"
+        style="max-width: 200px;">
+      <i class="fas fa-magnifying-glass"></i>
+    </div>
+
+    <!-- Logo -->
+    <div class="text-center">
+      <img src="images/company-logo (2).jpeg" alt="Logo" class="d-block mx-auto w-25" />
+      <small class="logo-text">Company Logo</small>
+    </div>
+
+    <div class="d-flex align-items-center gap-3">
+      <a href="registration.html" class="text-white text-decoration-none d-none d-lg-block">Register / Login</a>
+      <div class="icon-badge d-none d-lg-block">
+        <i class="fas fa-heart"></i>
+        <span class="badge rounded-pill">1</span>
+      </div>
+      <div class="icon-badge d-none d-lg-block">
+        <i class="fas fa-cart-shopping"></i>
+        <span class="badge rounded-pill">1</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navbar in desktop -->
+  <nav class="navbar navbar-expand-lg bg-white border-top d-none d-lg-block">
+    <div class="container justify-content-center">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-center" id="mainNav">
+        <ul class="navbar-nav text-center">
+          <li class="nav-item"><a class="nav-link" href="#">HOME</a></li>
+          <li class="nav-item"><a class="nav-link" href="#aboutus">ABOUT US</a></li>
+          <li class="nav-item"><a class="nav-link" href="#service">SERVICE</a></li>
+          <li class="nav-item"><a class="nav-link" href="#pricing">PRICING</a></li>
+          <li class="nav-item"><a class="nav-link" href="#blog">BLOG</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">CONTACT</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- 👇 Mobile Top (Visible only on small screens) -->
+  <div class="mobile-toggle-area d-lg-none">
+    <img src="images/company-logo (2).jpeg" alt="Logo" style="height: 40px;" />
+    <button class="btn" id="toggleMenuBtn">
+      <i class="fas fa-bars fa-lg text-white"></i>
+    </button>
+  </div>
+
+  <!-- 👇 Mobile Menu Content (hidden by default) -->
+  <div class="mobile-menu d-lg-none" id="mobileMenu">
+    <input type="text" class="form-control me-2" placeholder="Search here" aria-label="Search">
+    <!-- Mobile Top Bar Items -->
+    <div class="d-flex align-items-center gap-3 mt-3">
+      <a href="#" class="text-decoration-none">Register / Login</a>
+      <div class="icon-badge">
+        <i class="fas fa-heart"></i>
+        <span class="badge rounded-pill">1</span>
+      </div>
+      <div class="icon-badge">
+        <i class="fas fa-cart-shopping"></i>
+        <span class="badge rounded-pill">1</span>
+      </div>
+
+
+    </div>
+
+    <!-- Mobile Nav Items -->
+    <ul class="nav flex-column">
+      <li class="nav-item"><a class="nav-link text-dark p-0" href="#">HOME</a></li>
+      <li class="nav-item"><a class="nav-link text-dark p-0" href="#aboutus">ABOUT US</a></li>
+      <li class="nav-item"><a class="nav-link text-dark p-0" href="#service">SERVICE</a></li>
+      <li class="nav-item"><a class="nav-link text-dark p-0" href="#pricing">PRICING</a></li>
+      <li class="nav-item"><a class="nav-link text-dark p-0" href="#blog">BLOG</a></li>
+      <li class="nav-item"><a class="nav-link text-dark p-0" href="#contact">CONTACT</a></li>
+    </ul>
+  </div>
+
+
+  <main class="container-fluid food-section">
+    <div class="row align-items-center">
+      <!-- Text Content -->
+      <div class="col-12 col-md-3 text-center text-md-start">
+        <h1 class="fw-bold text-success responsive-heading">AMERICAN FOOD</h1>
+        <h3 class="text-success responsive-subheading">The Best Taste Food</h3>
+        <hr style="width: 50px; border: 2px solid #146c2b;">
+        <p class="text-muted responsive-paragraph">
+          Lorem Ipsum available, but the majority have suffered alteration in some form, by
+          injected humour, or randomised words.
+        </p>
+        <div class="d-flex justify-content-center justify-content-md-start mt-4 gap-2 flex-wrap">
+          <button class="order-btn btn-custom-radius responsive-btn" aria-label="Order Now" onclick="aditya1()">ORDER NOW</button>
+          <button class="back-btn btn-custom-radius responsive-btn" aria-label="Go Back">&#8592;</button>
+        </div>
+      </div>
+
+      <!-- Food Image Section -->
+      <div class="col-12 col-md-9 food-img d-flex flex-column align-items-center mt-4 mt-md-0">
+        <img src="images/American-foods.jpg" class="img-fluid mb-3" alt="French fries, burger, tomato and lettuce"
+          loading="lazy" />
+        <p class="visually-hidden">
+          Image showing a meal with fries, a burger, lettuce, tomato, and a smartphone beside.
+        </p>
+      </div>
+    </div>
+  </main>
+  <!-- Food Image Section -->
+
+  <!-- ABOUT US SECTION -->
+  <div id="aboutus" class="container about-us" role="region" aria-labelledby="about-heading">
+    <!-- Heading & Subheading -->
+    <div class="row justify-content-center mb-4">
+      <div class="col-lg-10">
+        <h2 class="about-heading" id="about-heading">ABOUT US</h2>
+        <p class="about-subheading">
+          Lorem Ipsum available, but the majority have suffered alteration<br />
+          in some form by injected humour
+        </p>
+      </div>
+    </div>
+
+    <!-- Main content -->
+    <div class="row align-items-center">
+
+      <!-- Left Text -->
+      <div class="col-lg-6 text-start">
+        <h3 class="text-success fw-semibold">
+          Let food be thy medicine<br />
+          medicine be thy food.
+        </h3>
+        <p class="text-muted small mb-2">
+          Lorem Ipsum available, but the majority have suffered alteration in some form by injected humour randomised
+          words which don't look even slightly believable. If you are going to use a passage.
+        </p>
+        <p class="text-muted small">
+          Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.
+        </p>
+
+        <!-- Buttons -->
+        <div class="d-flex justify-content-center justify-content-md-start mt-4">
+          <button class="order-btn btn-custom-radius" aria-label="Order Now">READ MORE</button>
+          <button class="back-btn btn-custom-radius" aria-label="Go Back">&#8592;</button>
+
+        </div>
+      </div>
+
+      <!-- Right Image -->
+      <div class="col-lg-6 mt-4 mt-lg-0 text-center text-lg-start">
+        <div class="img-wrapper">
+          <img src="images/Abot-sectoin.jpg" alt="Healthy grilled sandwiches" class="img-fluid rounded" />
+          <a href="#" class="play-button" aria-label="Watch food video">
+            <i class="bi bi-play-circle-fill"></i>
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Start Responsive Food Section -->
+    <div class="container video-section" role="region" aria-labelledby="food-section-title">
+      <div class="row align-items-center">
+
+        <!-- Left: Image -->
+        <div class="col-lg-6 mb-4 mb-lg-0 text-center text-lg-start">
+          <div class="video-wrapper">
+            <img src="images/Abot-sectoin.jpg" alt="Grilled sandwiches on a wooden plate" />
+            <span class="corner-style"></span>
+            <a href="#" class="play-button" aria-label="Play food video">
+              <i class="bi bi-play-circle-fill"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right: Content -->
+        <div class="col-lg-6">
+          <h2 id="food-section-title">Let food be thy medicine<br>medicine be thy food.</h2>
+          <p>
+            Lorem Ipsum available, but the majority have suffered alteration in some form by injected humour randomised
+            words which don't look even slightly believable. If you are going to use a passage.
+          </p>
+          <p>
+            Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.
+          </p>
+
+          <!-- Action buttons -->
+          <div class="d-flex justify-content-center justify-content-md-start mt-4">
+            <button class="order-btn btn-custom-radius" aria-label="Order Now">READ MORE</button>
+            <button class="back-btn btn-custom-radius" aria-label="Go Back">&#8592;</button>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- SERVICE -->
+  <header id="service" class="py-5 bg-light position-relative text-center">
+    <div class="bg-faint">SERVICE</div>
+    <h2 class="section-title position-relative">SERVICE</h2>
+    <p class="text-muted px-3">
+      Lorem Ipsum available, but the majority have suffered alteration in some form by injected humour
+    </p>
+  </header>
+
+  <main class="container-fluid py-5">
+    <div class="row mb-5 align-items-center">
+      <div class="col-md-8 order-md-1">
+        <h2 class="h4">Peanut Butter <span class="text-success float-end">$45</span></h2>
+        <p>
+          Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour,
+          or randomised words which don't look even slightly believable. If you are going to use a passage
+          of Lorem Ipsum, you need to be sure.
+        </p>
+        <button class="order-btn btn-custom-radius" aria-label="Order Now">BUY NOW</button>
+      </div>
+      <div class="col-md-4 text-center order-md-2">
+        <img src="images/service-food2.jpg" alt="Peanut butter meal with fries" class="img-fluid rounded" />
+      </div>
+    </div>
+
+    <div class="row mb-5 align-items-center">
+      <div class="col-md-8 order-md-1">
+        <h2 class="h4">Pumpkin Pie <span class="text-success float-end">$35</span></h2>
+        <p>
+          Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour,
+          or randomised words which don't look even slightly believable. If you are going to use a passage
+          of Lorem Ipsum, you need to be sure.
+        </p>
+        <button class="order-btn btn-custom-radius" aria-label="Order Now">BUY NOW</button>
+      </div>
+      <div class="col-md-4 text-center order-md-2">
+        <img src="images/service-food3.jpeg" alt="Pumpkin pie with sauce and celery" class="img-fluid rounded" />
+      </div>
+    </div>
+
+    <div class="row mb-5 align-items-center">
+      <div class="col-md-8 order-md-1">
+        <h2 class="h4">Jambalaya <span class="text-success float-end">$50</span></h2>
+        <p>
+          Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour,
+          or randomised words which don't look even slightly believable. If you are going to use a passage
+          of Lorem Ipsum, you need to be sure.
+        </p>
+        <button class="order-btn btn-custom-radius" aria-label="Order Now">BUY NOW</button>
+      </div>
+      <div class="col-md-4 text-center order-md-2">
+        <img src="images/service-food.jpeg" alt="Jambalaya burger with tomato and lettuce" class="img-fluid rounded" />
+      </div>
+    </div>
+
+    <div class=" discount-section">
+      <div class="row align-items-center gy-4">
+        <!-- Text Content -->
+        <div class="col-lg-6 text-center text-lg-start">
+          <h5 class="text-success fw-bold">Special</h5>
+          <h1 class="fw-bold text-dark">SALE 50% DISCOUNT</h1>
+          <h4 class="text-uppercase text-muted">All Food Products</h4>
+          <p class="mt-3">
+            Lorem Ipsum available, but the majority have suffered some form, by injected humour, or randomised words
+            of Lorem Ipsum, you need to be sure.
+          </p>
+          <button class="order-btn btn-custom-radius" aria-label="Discover Now">DISCOVER NOW</button>
+        </div>
+
+        <!-- Image -->
+        <!-- <div class="col-lg-6 text-center">
+          <img src="images/service-food2.jpg" alt="Fried chicken with fries and ketchup" class="img-fluid rounded shadow" />
+        </div> -->
+      </div>
+    </div>
+  </main>
+
+
+  <!-- PRICING -->
+
+  <section id="pricing" class="py-5 bg-light container-fluid">
+    <h2 class="pricing-title mb-4 position-relative z-1">PRICING</h2>
+    <p class="text-center text-muted mb-5">
+      Lorem Ipsum available, but the majority have suffered alteration in some form by injected humour
+    </p>
+    <div class="row g-4 justify-content-center">
+      <!-- Basic Plan -->
+      <div class="col-md-4">
+        <div class="card pricing-card h-100 text-center">
+          <div class="card-header py-4">
+            <h4 class="fw-bold">Basic</h4>
+            <h3 class="fw-bold">$35</h3>
+          </div>
+          <div class="card-body">
+            <p>6 Pcs Chicken</p>
+            <p>3 Pcs Beef Chicken</p>
+            <p>2 Pcs Burger</p>
+            <button class="order-btn btn-custom-radius" aria-label="Order Now">BUY NOW</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Standard Plan -->
+      <div class="col-md-4 position-relative">
+        <div class="card pricing-card h-100 text-center">
+          <div class="ribbon"><span>HOT</span></div>
+          <div class="card-header py-4">
+            <h4 class="fw-bold">Standard</h4>
+            <h3 class="fw-bold">$50</h3>
+          </div>
+          <div class="card-body">
+            <p>6 Pcs Chicken</p>
+            <p>3 Pcs Beef Chicken</p>
+            <p>2 Pcs Burger</p>
+            <button class="order-btn btn-custom-radius" aria-label="Order Now">BUY NOW</button>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Premium Plan -->
+      <div class="col-md-4">
+        <div class="card pricing-card h-100 text-center">
+          <div class="card-header py-4">
+            <h4 class="fw-bold">Premium</h4>
+            <h3 class="fw-bold">$45</h3>
+          </div>
+          <div class="card-body">
+            <p>6 Pcs Chicken</p>
+            <p>3 Pcs Beef Chicken</p>
+            <p>2 Pcs Burger</p>
+            <button class="order-btn btn-custom-radius" aria-label="Order Now">BUY NOW</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+
+
+  <div class="offer-section">
+    <div class="container-fluid">
+      <div class="row align-items-center gy-4">
+        <!-- Image Left -->
+        <div class="col-lg-6 text-center">
+          <img src="images/Abot-sectoin2.jpg" alt="Grilled sandwich with tomato and lettuce on a wooden board"
+            class="img-fluid rounded shadow" />
+        </div>
+
+        <!-- Text Right -->
+        <div class="col-lg-6 text-center text-lg-start">
+          <h6 class="text-success fw-bold">Special</h6>
+          <h1 class="fw-bold text-dark">SALE 50% DISCOUNT</h1>
+          <h4 class="text-uppercase text-muted mb-3">All Food Products</h4>
+          <p class="text-dark">
+            Lorem Ipsum available, but the majority have suffered some form, by injected humour, or randomised words of
+            Lorem Ipsum, you need to be sure.
+          </p>
+          <button class="order-btn btn-custom-radius me-5" aria-label="Discove Read">DISCOVER NOW</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BLOG -->
+
+  <section id="blog" class="py-5">
+    <div class="container text-center">
+      <h2 class="blog-header mb-3">
+        BLOG <span>BLOG</span>
+      </h2>
+      <p class="blog-text mb-5">
+        Lorem Ipsum available, but the majority have suffered alteration <br>
+        in some form by injected humour
+      </p>
+
+      <div class="row g-4">
+        <!-- Left Image -->
+        <div class="col-md-4">
+          <img src="images/blog-pic.jpeg" alt="Hotdogs with American flag and fries" class="img-fluid rounded shadow">
+        </div>
+
+        <!-- Center Text -->
+        <div class="col-md-4 d-flex align-items-center">
+          <div class="blog-card w-100 p-3 border rounded shadow-sm">
+            <h5 class="mb-2">Eat food. Not too much mostly plants.</h5>
+            <p class="text-muted mb-3">
+              Lorem Ipsum available, but the majority have suffered alteration some form, by injected humour randomised
+              words. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur, vel.
+            </p>
+            <button class="order-btn btn-custom-radius me-auto" aria-label="Read More">READ MORE</button>
+          </div>
+        </div>
+
+
+        <!-- Right Image -->
+        <div class="col-md-4">
+          <img src="images/blog-burger.jpeg" alt="Burger with fries and salad" class="img-fluid rounded shadow">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION  -->
+  <div id="contact" class="hero">
+    <h1>Contact Section</h1>
+    <!-- Decorative shapes (you can replace with SVG or image) -->
+    <div class="decor decor-left">
+      <i class="fas fa-play fa-rotate-270"></i>
+    </div>
+    <div class="decor decor-right">
+      <i class="far fa-circle-dashed"></i>
+    </div>
+
+    <!-- Company Logo -->
+    <div class="hero-logo">
+      <img src="images/company-logo (2).jpeg" alt="Company Logo" />
+      <div class="logo-text">Company Logo</div>
+    </div>
+
+    <!-- Heading -->
+    <h1>AMERICAN FOOD</h1>
+    <p>The Best Taste Food</p>
+
+    <!-- Social Icons -->
+    <div class="social-icons mb-3">
+      <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+      <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+      <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+    </div>
+
+    <!-- Website Link -->
+    <div>
+      <a href="https://yourwebsite.com" class="text-white fw-bold text-decoration-none"
+        aria-label="Visit our website">yourwebsite.com</a>
+    </div>
+  </div>
+
+
+  <!-- Toggle Script -->
+  <script>
+    document.getElementById("toggleMenuBtn").addEventListener("click", function () {
+      document.getElementById("mobileMenu").classList.toggle("show");
+    });
+  </script>
+
+  <script>
+
+    window.onload=
+    function sonu(){
+      alert("Hello, Sonu");
+      // confirm("You are happy");
+      // prompt("Enter your age.");
+      // document.write("You clicked");
+    }
+
+
+    function sonu1(){
+      confirm("jfadlkjfkaj")
+    }
+  </script>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
